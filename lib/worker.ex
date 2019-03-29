@@ -19,9 +19,10 @@ defmodule Metex.Worker do
     result =
       url_for(location)
       |> HTTPoison.get()
-      |> IO.inspect(label: "WTF")
+      # |> IO.inspect(label: "WTF")
       |> parse_response
-      |> IO.inspect(label: "WTF")
+
+    # |> IO.inspect(label: "WTF")
 
     case result do
       {:ok, temp} ->
